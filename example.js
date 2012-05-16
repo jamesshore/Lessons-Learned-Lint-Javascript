@@ -28,6 +28,7 @@ EXAMPLE_GLOBAL = "foo";
 
 (function() {
 	"use strict";
+	var jshint = require("jshint").JSHINT;
 
 	function lintFile(filename, options, globals) {
 		var sourceCode = require("fs").readFileSync(filename, "utf8");
@@ -57,8 +58,6 @@ EXAMPLE_GLOBAL = "foo";
 		});
 		return allPass;
 	}
-
-	var jshint = require("jshint").JSHINT;
 
 	var options = {
 		bitwise: true,
